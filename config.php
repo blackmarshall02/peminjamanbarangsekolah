@@ -1,6 +1,9 @@
 <?php
-	$connect = mysql_connect("localhost","root","") or die("Gagal Koneksi");
-	if(mysql_select_db("db_pinjam_barang")){
-		//echo "DATABASE TERPILIH: db_pinjam_barang";
-	}
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "db_peminjaman";
+
+$koneksi = mysql_connect($host, $user, $password) or die("Koneksi ke database gagal");
+mysql_select_db($database, $koneksi);
 ?>
